@@ -29,7 +29,11 @@ namespace TicTacToe
 		std::array<Piece, BOARD_SIZE> _boardState;
 
 	public:
+		Board();
+		~Board();
 		
+		void SetPieceAt(int x, int y, Piece piece);
+		const std::array<Piece, BOARD_SIZE> GetBoardState();
 		// checkBoardState
 		// setPos ( x, y, player )
 		// clear

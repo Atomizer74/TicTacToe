@@ -12,10 +12,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\Game\Board.h" />
+    <ClInclude Include="..\..\Source\Game\GameEngine.h" />
     <ClInclude Include="..\..\Source\Game\Piece.h" />
     <ClInclude Include="..\..\Source\Game\Player.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\source\game\Board.cpp" />
+    <ClCompile Include="..\..\source\game\GameEngine.cpp" />
     <ClCompile Include="..\..\Source\Game\Player.cpp" />
     <ClCompile Include="..\..\Source\main.cpp" />
   </ItemGroup>

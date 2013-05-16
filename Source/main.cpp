@@ -1,10 +1,14 @@
 #include <iostream>
 
-#include "Game/Board.h"
+#include "Game/GameEngine.h"
 
+using std::cout;
+using std::endl;
 
 int main(int argc, const char* argv[])
 {
-	std::cout << "Hello World!\n";
+	TicTacToe::GameEngine game;
+	game.Run();
+
 	return 0;
 }

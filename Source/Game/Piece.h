@@ -9,7 +9,7 @@ namespace TicTacToe
 	 * Threading:
 	 * Since the value will not change throughout its lifetime, this should be thread safe and is fine to be copied, but not moved
 	 *
-	 * COPYABLE, READONLY, THREAD-SAFE
+	 * COPYABLE, MOVABLE, READONLY, THREAD-SAFE
 	 */
 	class Piece
 	{
@@ -22,19 +22,18 @@ namespace TicTacToe
 
 		// Copy Constructor
 		Piece(const Piece& ref) : _value(ref._value) {}
+		// Move Constructor
+		Piece(Piece&& rhs) : _value(rhs._value) {}
 
 		const char Value() const { return _value; }
 
 		// Operator Overloads
 		bool operator==(const Piece& rhs) const { return (_value == rhs._value); }
-		
+		Piece& operator=(const Piece& rhs) { _value = rhs._value; return *this; }
 
 	private:
-		// Move Constructor
-		Piece(Piece&& rhs) {}
-
-		// Asignment Operator - We dont want to allow this
-		Piece& operator=(const Piece& rhs) { _value = rhs._value; return *this; }
+		
+		
 	};
 
 

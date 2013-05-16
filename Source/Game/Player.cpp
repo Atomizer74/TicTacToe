@@ -3,7 +3,7 @@
 namespace TicTacToe
 {
 
-	Player::Player(Piece piece) : _piece(piece)
+	Player::Player(std::string name, Piece piece) : _name(name), _piece(piece)
 	{
 	}
 
@@ -15,6 +15,11 @@ namespace TicTacToe
 	Piece Player::getPiece()
 	{
 		return _piece;
+	}
+
+	std::string Player::getName()
+	{
+		return _name;
 	}
 
 } // namespace TicTacToe
